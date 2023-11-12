@@ -1,0 +1,205 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+body{
+    margin: 0;
+    font-family: system-ui;
+    background: #10121c;
+    color: #eee;
+}
+#container{
+    margin: 0;
+    padding: 0;
+}
+.banner{
+    width: 100%;
+    height: 90vh;
+    background-image: url(./17-4.jpg);
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: 1s;
+}
+.banner::before{
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    content: '';
+    background-image: linear-gradient(to top, #10121c, transparent);
+}
+.banner.content{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+    font-size: 30px;
+    width: 500px;
+    font-weight: 300;
+    transition: 1s
+}
+/* logo */
+.nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1111111111111111111;
+}
+.logo{
+    position: absolute;
+    left: 15%;
+    top: 40px;
+}
+/* .back{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio: 16/9){
+    .back{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9)
+{
+    .back{
+        width: auto;
+        height: 100%;
+    }
+}
+*/
+
+.menu{
+    position: absolute;
+    top: 0;
+    width: 70%;
+    padding: 15vh 15% 0 15%;
+    min-height: 50vh;
+    background: rgb(18, 20, 45,.5);
+    transform: translate(0, -90%);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transition: 1s;
+    text-align: center;
+}
+#direction{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0.5;
+    cursor: pointer;
+}
+#direction i:nth-child(2){
+    display: none;
+}
+.activeMenu #direction i:nth-child(2){
+    display: block;
+}
+.activeMenu #direction i:nth-child(1){
+    display: none;
+}
+.activeMenu .menu{
+    transform: translate(0,0);
+    background: rgb(18, 20, 45);
+}
+.activeMenu .banner.content{
+    top: 70%;
+}
+.activeMenu.banner{
+    background-size: 150% auto;
+}
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.list{
+    width: 60%;
+    float: left;
+}
+.nav .list ul{
+    width: 50%;
+    float: left;
+    margin: 0;
+    text-align: left;
+    margin-bottom: 50px;
+}
+.nav .list ul li{
+    padding: 10px 30px 10px 0;
+    opacity: 0.7;
+}
+.nav .list ul li:nth-child(1){
+    font-weight: bold;
+}
+.other, .netWork{
+    width: 20%;
+    float: left;
+    text-align: left;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 60px;
+    font-size: large;
+    font-weight: 500;
+}
+.netWork{
+    text-align: right;
+    color: aqua; 
+}
+.fa-brands fa-youtube{
+    cursor: pointer;
+}
+.menu li{
+    opacity: 0;
+}
+.activeMenu li{
+    opacity: 0;
+    animation: effectMenu 1s ease-in-out 1 forwards;
+}
+@keyframes effectMenu{
+    from{
+        opacity: 0;
+        transform: translate(0, -50%);
+    }to{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+.activeMenu li:nth-last-child(2){
+    animation-delay: 0.2s!important;
+}
+.activeMenu li:nth-last-child(3){
+    animation-delay: 0.4s!important;
+}
+.activeMenu li:nth-last-child(4){
+    animation-delay: 0.6s!important;
+}
+.activeMenu li:nth-last-child(5){
+    animation-delay: 0.8s!important;
+}
+.dangnhap{
+    border: none;
+    background: linear-gradient(red, orange, yellow);
+    color: black;
+    padding: 10px 26px;
+    cursor: pointer;
+    transition: background 1s;
+    
+}
+.dangky{
+    border: none;
+    background: linear-gradient(aqua, green, pink);
+    padding: 10px 34.25px;
+    cursor: pointer;
+
+}
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #dfdfdf;
+}

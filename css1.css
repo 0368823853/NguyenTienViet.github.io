@@ -1,0 +1,31 @@
+
+
+.benner{
+    background-color: rgb(238, 17, 153);
+    
+    
+    
+}
+.name{
+    font: 70px;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+.menu{
+    background: blueviolet;
+    height: 40px;
+    align-self: center;
+}
+.dangnhap{
+    background: aqua;
+    height: 60px;
+}
+#dmm{
+    background-color: chartreuse;
+    
+    border:brown dashed;
+    
+    width: 50%;
+}
